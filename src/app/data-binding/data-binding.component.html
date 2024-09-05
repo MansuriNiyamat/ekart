@@ -1,0 +1,18 @@
+<div class="container m-auto p-5 shadow " highlight [disableItem]="true">
+  <ng-content></ng-content>
+
+
+  {{data}}
+  <p setBackground>{{title}} works! -- string interpolation to display</p>
+  <input type="text" class="form-input" value={{title}}> -- string interpolation in property<br>
+  <input type="text" class="form-input" [value]='title'> -- property binding with [ ]<br>
+  <input type="text" class="form-input" bind-value='title'> -- property binding with bind <br>
+
+  <input type="text" class="form-input" (input)="onInput($event)"> -- event binding html to component => <span>{{ev}}</span> <br>
+  <input type="text" class="form-input" [(ngModel)]="twoWay"> -- two way data bindind <span>{{twoWay}}</span><br>
+  <input type="text" class="form-input"  #refInput> -- reference variable <span>{{ref}}</span>
+  <button class="btn btn-primary"  (click)="getInput(refInput)">refrence Variable</button>
+</div>
+
+
+s

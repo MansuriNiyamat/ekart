@@ -1,0 +1,7 @@
+<div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="container">
+    <div class="row" *ngFor="let row of pieces; let i = index">
+      <div  *ngFor="let col of row; let j= index" [ngClass]="getStyle(i, j)"   >
+         {{col}}
+              </div>
+    </div>
+</div>
