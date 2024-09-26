@@ -15,10 +15,12 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { httpInterceptService } from './services/auth-intercept.service';
+import { TaskComponent } from './task/task.component';
+import { TictacComponent } from './tictac/tictac.component';
 @NgModule({
   declarations: [
     SetBackground,Highlight,
-    AppComponent, ChessBoardComponent, DataBindingComponent, DirectivesComponent, HooksComponent, DisableItemDirective, ReactiveFormComponent
+    AppComponent, ChessBoardComponent, DataBindingComponent, DirectivesComponent, HooksComponent, DisableItemDirective, ReactiveFormComponent, TaskComponent, TictacComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+.white{
+
+  font-size: 50px;
+  height: 100px;
+  width:100px
+}
+.container {
+
+display: grid;
+grid-template-columns: 100px 100px 100px ;
+}

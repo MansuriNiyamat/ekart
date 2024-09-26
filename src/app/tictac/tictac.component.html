@@ -1,0 +1,9 @@
+Winner : {{winner}}
+Current Player : {{currentPlayer}}
+<button (click)="reset()">Reset</button>
+<div class="container">
+
+  @for ( item of board;track $index; let i = $index) {
+    <button class="white" type="button" (click)="btnClick(i)">{{board[i]}}</button>
+  }
+</div>

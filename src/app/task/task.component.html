@@ -1,0 +1,43 @@
+<section class="container">
+  <header>Registration Form</header>
+
+  <form class="form" [formGroup]="reactiveForm" (ngSubmit)="onFormSubmit()">
+    <div class="column">
+      <div class="input-box">
+        <input type="text" placeholder="Task name" formControlName="task_name" />
+        <small *ngIf="reactiveForm.get('task_name').invalid &&
+          reactiveForm.get('task_name').touched
+        ">*Task name is required field</small>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Description" formControlName="descirption"/>
+        <small *ngIf="reactiveForm.get('descirption').invalid &&
+        reactiveForm.get('descirption').touched
+      ">*description is required field</small>
+      </div>
+      <div class="input-box">
+        <input type="checkbox" value="completed"  formControlName="completed"/> Comleted ?
+
+      </div>
+    </div>
+
+    <input type="submit" value="Submit" class="submit-btn" [disabled]="!reactiveForm.valid">
+    <!-- [disabled]="!reactiveForm.valid" -->
+  </form>
+</section>
+
+<!--uncomment below HTML for displaying form data-->
+
+<section class="user-detail-container">
+  <div class="user-details-container" *ngFor="let task of tasks">
+
+    <div class="task-details">
+      <div class="user-name">
+        <h2>{{task.task_name}}</h2>
+      </div>
+      <p><b>description:</b> {{task.description}}</p>
+ </div>
+    <button type="button" class="btn-add-delete">Delete Task</button>
+  </div>
+  <br>
+</section>
